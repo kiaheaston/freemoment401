@@ -19,9 +19,10 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             grid-gap: 20px;
+            justify-content: center; /* Center the grid horizontally */
         }
         .image-grid img {
-            width: 100%;
+            max-width: 100%; /* Ensure images don't overflow their containers */
             height: auto;
         }
         .header-gif {
@@ -39,7 +40,7 @@
 </head>
 <body>
     <div class="header-gif">
-        <img src="dove.gif" alt="Header GIF"">
+        <img src="dov.gif" alt="Header GIF" style="width: 100%;">
     </div>
     <h1>freemoment401 Display</h1>
     <div class="image-grid">
