@@ -13,7 +13,6 @@
         }
         h1 {
             text-align: center;
-            font-family: 'Mallaire Calligraphy Demo', cursive; /* Specify the font family */
         }
         .contact-info {
             margin-bottom: 20px;
@@ -31,30 +30,51 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        @font-face {
-            font-family: 'Mallaire Calligraphy Demo';
-            src: url('fonts/Mallaire%20Calligraphy%20Demo.otf') format('opentype'); /* Path to your font file */
+        .nav-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav-bar a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .nav-bar a:hover {
+            background-color: #333;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <div class="header-gif">
-        <img src="dove.gif" alt="Header GIF">
-    </div>
-    
-    <h1>freemoment401 display</h1>
-    <div class="contact-info">
-        <p><strong>Name:</strong> Kiah Easton</p>
-        <p><strong>Email:</strong> kiaheaston1999@gmail.com</p>
-        <p><strong>Phone:</strong> +7408562592</p>
+    <div class="nav-bar">
+        <a href="#contact">Contact</a>
+        <a href="#display">Display</a>
     </div>
 
-    <h2>Image Gallery</h2>
-    <div class="image-grid">
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
-        <!-- Add more images as needed -->
+    <div id="contact">
+        <h1>Contact Information</h1>
+        <div class="contact-info">
+            <p><strong>Name:</strong> Kiah Easton</p>
+            <p><strong>Email:</strong> kiaheaston1999@gmail.com</p>
+            <p><strong>Phone:</strong> +7408562592</p>
+        </div>
+    </div>
+
+    <div id="display">
+        <h1>Image Gallery</h1>
+        <div class="image-grid">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <div class="header-gif">
+        <img src="dove.gif" alt="Header GIF">
     </div>
 </body>
 </html>
