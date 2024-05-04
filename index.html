@@ -14,8 +14,9 @@
         h1 {
             text-align: center;
         }
-        .contact-info {
-            margin-bottom: 20px;
+        .contact-info,
+        .image-grid {
+            display: none; /* Hide by default */
         }
         .image-grid {
             display: grid;
@@ -49,23 +50,25 @@
     </style>
 </head>
 <body>
+    <h1>Contact Info and Image Gallery</h1>
+
     <div class="nav-bar">
-        <a href="#contact">Contact</a>
-        <a href="#display">Display</a>
+        <a href="#contact" onclick="toggleSection('contact')">Contact</a>
+        <a href="#display" onclick="toggleSection('display')">Display</a>
     </div>
 
-    <div id="contact">
-        <h1>Contact Information</h1>
-        <div class="contact-info">
+    <div id="contact" class="contact-info">
+        <h2>Contact Information</h2>
+        <div>
             <p><strong>Name:</strong> Kiah Easton</p>
             <p><strong>Email:</strong> kiaheaston1999@gmail.com</p>
             <p><strong>Phone:</strong> +7408562592</p>
         </div>
     </div>
 
-    <div id="display">
-        <h1>Image Gallery</h1>
-        <div class="image-grid">
+    <div id="display" class="image-grid">
+        <h2>Image Gallery</h2>
+        <div>
             <img src="image1.jpg" alt="Image 1">
             <img src="image2.jpg" alt="Image 2">
             <img src="image3.jpg" alt="Image 3">
@@ -76,5 +79,16 @@
     <div class="header-gif">
         <img src="dove.gif" alt="Header GIF">
     </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
