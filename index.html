@@ -10,7 +10,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            transition: filter 0.5s ease; /* Add transition for smooth effect */
         }
         h1 {
             text-align: center;
@@ -37,21 +36,19 @@
             z-index: 9999;
             object-fit: contain; /* Maintain aspect ratio */
         }
-        .header-gif {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        /* Add blur effect only to body background */
-        .blurred::before {
-            content: '';
+        .overlay {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: inherit;
-            z-index: -1;
-            filter: blur(5px);
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.7); /* White overlay with 70% opacity */
+            z-index: 9998; /* Ensure it's behind the expanded image */
+        }
+        .header-gif {
+            text-align: center;
+            margin-bottom: 20px;
         }
     </style>
     <!-- Add font file -->
@@ -72,13 +69,13 @@
         <img src="horse%20checkpoint%204%20central%20angel%20confirmed.jpg" alt="Horse Checkpoint" onclick="expandImage(this)">
         <img src="image3.jpg" alt="Image 3" onclick="expandImage(this)">
     </div>
+    <div class="overlay"></div> <!-- Add overlay element -->
 
     <script>
         function expandImage(image) {
             image.classList.toggle('expanded'); // Toggle the 'expanded' class on click
-            document.body.classList.toggle('blurred'); // Toggle the 'blurred' class on body
+            document.querySelector('.overlay').classList.toggle('show'); // Toggle the 'show' class on overlay
         }
     </script>
 </body>
 </html>
-
