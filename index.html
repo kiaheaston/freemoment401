@@ -17,12 +17,12 @@
         }
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(4, calc(25% - 20px)); /* 4 columns with 20px gap */
+            grid-template-columns: repeat(4, 1fr); /* 4 columns across */
             grid-gap: 20px;
             justify-content: center; /* Center the grid horizontally */
         }
         .image-grid img {
-            max-width: 100%; /* Ensure images don't overflow their containers */
+            width: 100%; /* Ensure images fill their grid cells */
             height: auto;
             cursor: pointer; /* Add pointer cursor to indicate clickable */
         }
