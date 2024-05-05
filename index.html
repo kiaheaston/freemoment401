@@ -24,6 +24,17 @@
         .image-grid img {
             max-width: 100%; /* Ensure images don't overflow their containers */
             height: auto;
+            cursor: pointer; /* Add pointer cursor to indicate clickable */
+        }
+        .image-grid img.expanded {
+            max-width: none; /* Remove max-width when expanded */
+            width: 100vw; /* Expand to full viewport width */
+            height: 100vh; /* Expand to full viewport height */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            object-fit: contain; /* Maintain aspect ratio */
         }
         .header-gif {
             text-align: center;
@@ -44,9 +55,15 @@
     </div>
     <h1>freemoment401</h1>
     <div class="image-grid">
-        <img src="test%202.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
+        <img src="test%202.jpg" alt="Image 1" onclick="expandImage(this)">
+        <img src="image2.jpg" alt="Image 2" onclick="expandImage(this)">
+        <img src="image3.jpg" alt="Image 3" onclick="expandImage(this)">
     </div>
+
+    <script>
+        function expandImage(image) {
+            image.classList.toggle('expanded'); // Toggle the 'expanded' class on click
+        }
+    </script>
 </body>
 </html>
